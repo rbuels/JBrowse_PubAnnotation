@@ -1,0 +1,18 @@
+{
+ "plugins": [ { "location": "../JBrowse_PubAnnotation", "name": "PubAnnotation" } ],
+ "tracks": [
+          { "label": "patest",
+            "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
+            "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
+            "type": "CanvasFeatures"
+          },
+          { "label": "paref",
+            "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
+            "type": "Sequence",
+            "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
+            "query": { "type": "reference" },
+            "showReverseStrand": false
+          }
+]
+
+}
