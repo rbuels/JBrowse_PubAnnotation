@@ -1,0 +1,12 @@
+div.sequence .base.big {
+    border: none;
+}
+
+div.sequence > div {
+    height: 100%;
+    background: #FAFFC3
+}
+
+span.base {
+    background: none
+}
