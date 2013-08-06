@@ -1,12 +1,15 @@
 {
+ "defaultTracks": "paref,denotations",
  "plugins": [ { "location": "../JBrowse_PubAnnotation", "name": "PubAnnotation" } ],
  "tracks": [
-          { "label": "patest",
+          { "label": "denotations",
+            "key": "Denotations",
             "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
             "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
             "type": "CanvasFeatures"
           },
           { "label": "paref",
+            "key": "Reference text",
             "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
             "type": "Sequence",
             "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
