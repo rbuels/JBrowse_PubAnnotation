@@ -58,7 +58,11 @@ return declare( SeqFeatureStore, {
   },
 
   _queryFeatures: function( query, data, featCallback, endCallback, errorCallback ) {
-      var denotations = data.denotations || [];
+      var denotations = (
+          'pubAnnotationTrackNumber' in this.config
+              ? (data.tracks||[])[this.config.pubAnnotationTrackNumber]
+              : data
+      ).denotations || [];
       for( var i = 0; i<denotations.length; i++ ) {
           var d = denotations[i] || {};
           var span = d.span || {};

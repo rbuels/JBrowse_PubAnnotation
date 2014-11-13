@@ -2,19 +2,26 @@
  "defaultTracks": "paref,denotations",
  "plugins": [ { "location": "../JBrowse_PubAnnotation", "name": "PubAnnotation" } ],
  "tracks": [
-          { "label": "denotations",
-            "key": "Denotations",
+          { "label": "genia-medco-coref",
             "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
-            "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
-            "type": "CanvasFeatures"
+            "urlTemplate": "/docs/sourcedb/PubMed/sourceid/{refseq}/annotations.json",
+            "type": "CanvasFeatures",
+            "pubAnnotationTrackNumber": 0
+          },
+          { "label": "NFkB-Entrez-Gene",
+            "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
+            "urlTemplate": "/docs/sourcedb/PubMed/sourceid/{refseq}/annotations.json",
+            "type": "CanvasFeatures",
+            "pubAnnotationTrackNumber": 1
           },
           { "label": "paref",
             "key": "Reference text",
             "storeClass": "PubAnnotation/Store/SeqFeature/PubAnnotation",
             "type": "Sequence",
-            "urlTemplate": "/projects/NFkB-Entrez%20Gene/pmdocs/{refseq}/annotations.json",
+            "urlTemplate": "/docs/sourcedb/PubMed/sourceid/{refseq}/annotations.json",
             "query": { "type": "reference" },
-            "showReverseStrand": false
+            "showReverseStrand": false,
+            "showTranslation": false
           }
 ]
 
